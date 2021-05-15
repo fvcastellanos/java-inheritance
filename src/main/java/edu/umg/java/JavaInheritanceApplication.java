@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import edu.umg.java.calculator.Calculator;
 import edu.umg.java.calculator.operation.OperationType;
+import edu.umg.java.shapes.Geometry;
 
 @SpringBootApplication
 public class JavaInheritanceApplication implements CommandLineRunner {
@@ -37,6 +38,12 @@ public class JavaInheritanceApplication implements CommandLineRunner {
 		calculator.performOperation(OperationType.SUBTRACTION);
 		calculator.performOperation(OperationType.MULTIPLICATION);
 		calculator.performOperation(OperationType.DIVISION);
+
+		LOGGER.info("Shapes");
+
+		var geometry = new Geometry();
+
+		geometry.calculateAreas();
 
 
 	}
