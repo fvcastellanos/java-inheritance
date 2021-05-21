@@ -24,9 +24,9 @@ public class Calculator {
         this.operationMap = buildOperationMap();
     }
 
-    public void performOperation(final OperationType operationType) {
+    public double performOperation(final OperationType operationType) {
 
-        operationMap.get(operationType).displayResult();
+        return operationMap.get(operationType).performOperation();
     }
 
     private Map<OperationType, TwoOperandOperation> buildOperationMap() {

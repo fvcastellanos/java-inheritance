@@ -7,7 +7,7 @@ public class DivisionOperation extends TwoOperandOperation {
     }
 
     @Override
-    public double perfomOperation() {
+    public double performOperation() {
         return firstOperand / secondOperand;
     }
     

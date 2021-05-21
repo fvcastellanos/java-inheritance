@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.umg.java.ui.controller.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <Pane prefHeight="394.0" prefWidth="640.0">
+         <VBox.margin>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </VBox.margin>
+         <children>
+            <Label layoutX="28.0" layoutY="25.0" text="First Number:" />
+            <ComboBox fx:id="comboBox" layoutX="178.0" layoutY="21.0" prefHeight="25.0" prefWidth="72.0" />
+            <TextField fx:id="edFirstNumber" layoutX="109.0" layoutY="21.0" prefHeight="25.0" prefWidth="50.0" />
+            <TextField fx:id="edSecondNumber" layoutX="359.0" layoutY="21.0" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="263.0" layoutY="25.0" text="Second Number:" />
+            <Button fx:id="btnPerformOperation" layoutX="418.0" layoutY="21.0" mnemonicParsing="false" onAction="#performOperation" text="Perform Operation" />
+            <Label layoutX="28.0" layoutY="79.0" text="Result:" />
+            <Label fx:id="lbResult" layoutX="81.0" layoutY="70.0" text="0.00" textFill="#1d12b2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnReset" layoutX="418.0" layoutY="58.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="115.0" text="Reset" />
+            <Label fx:id="lbError" layoutX="28.0" layoutY="124.0" text="Error" textFill="#d02b2b" />
+         </children>
+      </Pane>
+  </children>
+</VBox>

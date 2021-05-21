@@ -16,10 +16,10 @@ public abstract class TwoOperandOperation {
         this.secondOperand = secondOperand;
     }
 
-    public abstract double perfomOperation();
+    public abstract double performOperation();
 
     public void displayResult() {
 
-        logger.info("Operation result: {}", perfomOperation());
+        logger.info("Operation result: {}", performOperation());
     }
 }

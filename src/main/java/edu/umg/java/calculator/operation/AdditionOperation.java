@@ -7,7 +7,7 @@ public class AdditionOperation extends TwoOperandOperation {
     }
 
     @Override
-    public double perfomOperation() {
+    public double performOperation() {
         return firstOperand + secondOperand;
     }    
 }
